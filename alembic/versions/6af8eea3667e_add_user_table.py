@@ -22,7 +22,7 @@ def upgrade() -> None:
     op.create_table('users',
                     Column('id', Integer, primary_key=True, nullable=False),
                     Column('email', String, nullable=False, unique=True),
-                    Column('password ', String, nullable=False),
+                    Column('password', String, nullable=False),
                     Column('created_at', TIMESTAMP(timezone=True), nullable=False,
                            server_default=text('now()'))
                     )
